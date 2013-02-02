@@ -1,0 +1,28 @@
+<spec heartbeatport="12344" statusport="12345" logfiledir="d:\temp\monitor.log" label="Test Machine" id="test1" smtphost="mailhost" l1mailto="kyle.richter@businessobjects.com" l2mailto="krichter@businessobjects.com" l2threshold="60">
+	<check label="Test Heartbeat Connection">
+		<host>10.50.130.30</host>
+		<port>3456</port>
+		<successrate>10</successrate>
+		<retryrate>30</retryrate>
+		<checktype>heartbeat</checktype>
+		<enabled>true</enabled>
+	</check>
+	<check label="Test Ping Connection">
+		<host>10.50.130.30</host>
+		<successrate>10</successrate>
+		<retryrate>30</retryrate>
+		<checktype>ping</checktype>
+		<enabled>false</enabled>
+	</check>
+	<check label="Test Port Connection">
+		<host>10.50.129.164</host>
+		<port>22</port>
+		<successrate>10</successrate>
+		<retryrate>30</retryrate>
+		<checktype>port</checktype>
+		<enabled>false</enabled>
+		<l2threshold>20</l2threshold>
+		<l1mailto>kyle.richter@sap.com</l1mailto>
+		<l2mailto>krichter@crystaldecisions.com</l2mailto>		
+	</check>
+</spec>
